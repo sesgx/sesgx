@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sesgx"
+version = "0.0.1"
+requires-python = ">= 3.9"
+description = "SeSG (Search String Generator) is a framework to help automate search string generation for SLRs."
+readme = "README.md"
+license = { file = "LICENSE" }
+keywords = [
+    "search string",
+    "automation",
+    "SLR",
+    "systematic literature review",
+]
+
+[project.optional-dependencies]
+dev-test = ["pytest==8.0.2", "pytest-cov==4.1.0"]
+
+[tool.pytest.ini_options]
+pythonpath = "."
+addopts = "--doctest-modules"
+
+[tool.ruff]
+extend-select = [
+    # isort
+    "I001",
+    "C",
+]
+unfixable = ["F841"]
+exclude = [".venv", "~/.pyenv/"]
+ignore-init-module-imports = true
+fix = true
