@@ -1,3 +1,4 @@
+![sesgx logo](sesgx_header.png)
 # sesgx
 
 > SeSG (Search String Generator) is a framework to help automate search string generation for SLRs.
